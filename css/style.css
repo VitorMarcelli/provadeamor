@@ -1,0 +1,323 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f5f8;
+    overflow-x: hidden;
+    
+}
+
+.pre{
+    width: 80px;
+    height: 80px;
+    background-image: url(img/loading.png);
+    background-position: center;
+    background-size: contain;
+
+    animation: load 2s infinite linear;
+}
+
+@keyframes load {
+    to{transform: rotate(360deg)}
+}
+
+.carregamento{
+    display: none;
+}
+
+.box-load{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f5f8;
+}
+
+.logo{
+    display: flex;
+    font-size: 30px;
+    font-weight: 800;
+    color: blueviolet;
+    letter-spacing: 3px;
+    cursor: pointer;
+    
+}
+
+
+
+nav{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
+    height: 80px;
+    line-height: 70px;
+    z-index: 111;
+    
+}
+
+.menu{
+    display: flex;
+    position: fixed;
+    background: #f3f5f8;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu a{
+    list-style: none;
+    margin: 0px 18px;
+}
+
+.menu a{
+    font-size: 25px;
+    color: black;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.menu a:hover {
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+.links a{
+    font-size: 30px;
+    color: black;
+    margin: 25px 10px;
+}
+
+.links a:hover{
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+.principal{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+
+
+
+.principal2{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    margin-top: -100px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.principal::before{
+    position: absolute;
+    content: '';
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    left: -12%;
+    top: 30%;
+    background: linear-gradient(45deg, blueviolet, pink);
+    animation: object1 6s linear infinite;
+}
+
+.principal::after{
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 45%;
+    top: 12%;
+    background: linear-gradient(45deg, pink, blueviolet);
+    animation: object2 6s linear infinite;
+}
+
+.container::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: 60%;
+    top: 152%;
+    background: linear-gradient(45deg, pink, blueviolet);
+    animation: object3 6s linear infinite;
+}
+
+.container::after{
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 40%;
+    top: 152%;
+    background: linear-gradient(45deg, blueviolet, pink);
+    animation: object4 6s linear infinite;
+}
+
+
+@keyframes object1{
+    50%{
+        left: -13;
+        top: 47%;
+    }
+
+}
+
+@keyframes object2{
+    50%{
+        left: 35;
+        top: 15%;
+    }
+
+}
+
+@keyframes object3{
+    50%{
+        left:55;
+        top: 145%;
+    }
+}
+
+@keyframes object4{
+    50%{
+        left:35;
+        top: 155%;
+    }
+}
+
+.cols{
+    width: 50%;
+    position: relative;
+}
+
+.cols1{
+    width: 60%;
+    z-index: 5;
+    
+}
+
+.top-linha{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: black;
+}
+
+.top-linha::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: blueviolet;
+}
+
+h1{
+    display: block;
+    font-size: 3em;
+    font-weight: 800;
+    color: black;
+}
+
+.texto-amor{
+    color: blueviolet;
+    text-transform: capitalize;
+}
+
+p{
+    display: block;
+    width: 90%;
+    font-size: 1em;
+    color: black;
+}
+
+.btns{
+    width: 100%;
+    position: relative;
+    left: 50px;
+}
+
+.btns i{
+    color: #fff;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: black;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 10px 10px black;
+}
+
+button:hover{
+    background-color: blueviolet;
+    transition: 0.3s;
+}
+
+.img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img img{
+    position: relative;
+    height: 90%;
+    width: calc(160% - 80px);
+    top: 50px;
+    right: 60px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+}
+
+@keyframes animateUser{
+    50% {
+        right: 50px;
+        top: 20px;
+    }
+}
+
+
